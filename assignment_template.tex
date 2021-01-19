@@ -21,7 +21,9 @@
 \usepackage{footnote}
 \usepackage{listings}
 \usepackage{framed}
-
+\usepackage{url}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{tikz}
 
 
@@ -53,6 +55,13 @@
 \begin{document}
 
 \maketitle
+
+\centering \textbf{Team:} Bravo\\
+\centering \textbf{Members:}\\
+\centering  Gaurav Kumar (220200656)\\
+\centering  Pavithree Shetty (220200661)\\
+\centering  Nisha Sharma (220202359)\\
+
 \section{Generative Models for the Web \hfill (25~points)}
 
 We provide you a file called \texttt{sample\_simple\_english\_wiki.txt}. The file contains a text snippet from Simple English Wikipedia. Your tasks are as follows:
@@ -79,6 +88,25 @@ We provide you a file called \texttt{sample\_simple\_english\_wiki.txt}. The fil
   \item Discuss the resulted plots and generated text (max half page).
 \end{enumerate}
 For this task, you are allowed to use only \textcolor{red}{string, regex, numpy, matplotlib} as library.
+\subsection{Solution:}
+ \begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{./resources/probability_distribution.png}
+    \caption{Probability word distribution}
+    \label{fig:Probability word distribution}
+\end{figure}
+
+Generated graph and Generated text
+\begin{enumerate}
+	\item Since there are no test conducted on the generative model, visually it shows that the length of words generated through the model is comparatively smaller than the actual text provided.
+	\item The number of generated words are 5 times more than the provided words which makes the comparison between the two text a little difficult.
+	\item The probability of word length for generated words are roughly 5\% less than the provided words in the original text.
+	\item The generated words are following exponential pattern with larger length word's frequency being negligible.
+	\item Visually comparing the probability shows that the average probability of the original words are higher than the generated word
+	\item This comparison can be further quantified or falsified using various tests.
+	\item Generated text is fairly good given that the model is quite simple and have various drawbacks.
+	\item The model is very simple and the generated text is not that accurate and might lack precision.
+\end{enumerate}
 
 %-------------------------------------------------------------------------------
 
@@ -121,6 +149,13 @@ Consider the following directed graph \emph{G}:
     \caption{In- and Outdegree}
     \label{fig:In- and Outdegree}
 \end{figure}
+ \item Calculate the In- and Outdegree of every vertex using counting matrix.
+    \begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{./resources/in-out-degree.jpeg}
+    \caption{In- and Outdegree Counting matrix}
+    \label{fig:In- and Outdegree Counting matrix}
+\end{figure}
     %\begin{enumerate}
      %   \item The in/outdegree functions from the slides.
       %  \item Linear algebra.
@@ -128,7 +163,7 @@ Consider the following directed graph \emph{G}:
     \item Highlight all strongly connected components.
     \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.4]{./resources/2.3.jpeg}
+    \includegraphics[scale=0.2]{./resources/2.3.jpeg}
     \caption{Strongly connected components}
     \label{fig:Strongly connected components}
 \end{figure}
